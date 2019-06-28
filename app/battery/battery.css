@@ -1,0 +1,24 @@
+body{
+    background : #5bc0de;
+}
+.container{margin-top: 200px;
+    height:500px;
+    border-radius: 20px;
+    background:#EFF0F1;}
+#bar{
+    width :300px;
+    border: 2px solid black;
+    padding: 6px;
+    border-radius: 10px;
+    
+}
+#out{
+    margin-top :100px;
+}
+
+#progress{
+    width: 5%;
+    height : 100px;
+    background: green;
+    border-radius: 2px;
+}

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="battery.css">
+    <script src="./battery.js"></script>
+    <title>Battery Status</title>
+    
+    <style>
+        /* body{
+            background : #5bc0de;
+        }
+        .container{margin-top: 200px;
+            height:500px;
+            border-radius: 20px;
+            background:#EFF0F1;}
+        #bar{
+            width :300px;
+            border: 2px solid black;
+            padding: 6px;
+            border-radius: 10px;
+            
+        }
+        #out{
+            margin-top :100px;
+        }
+        
+        #progress{
+            width: 5%;
+            height : 100px;
+            background: green;
+            border-radius: 2px;
+        }
+         */
+    </style>
+  </head>
+  <body>
+
+    <div class="container text-dark p-5 d-flex-coloumn">
+        <h1 id="out" class="text-center mb-3"></h1>
+        <div class="d-flex justify-content-center">
+            <div id="bar" class="">
+                <div id="progress" class="batfil d-flex justify-content-center"></div>    
+            </div>
+        
+    </div>
+    <p id="msg" class="mt-3 d-flex justify-content-center"></p>
+    </div>
+
+
+    <script>
+            // var bar = document.getElementById("progress");
+            // var output = document.getElementById("out");
+                
+            //     navigator.getBattery().then(function(battery) 
+            //     {   
+                    
+            //         var abc = battery.level*100+"%";
+            //         console.log(battery.level)
+            //         bar.setAttribute("style", `width:${abc}`)
+            //         output.innerHTML = "Your device current battery level is " + Math.floor(battery.level*100) + "%";
+            //         console.log(typeof(abc) )
+            //         if (abc >= "85%" && abc <= "100%")
+            //         {
+            //             bar.setAttribute("style", `width:${abc}; background : green;`)
+            //             document.getElementById("msg").innerText = "*Device battery is almost full";
+            //             document.getElementById("msg").setAttribute("style", `color : #green;`)
+            //         }
+            //         else if (abc >= "61%" && abc <= "84%")
+            //         {
+            //             bar.setAttribute("style", `width:${abc}; background : FF5733;`)
+            //             document.getElementById("msg").innerText = "*Device battery is at optimal level, please carry on with your work";
+            //             document.getElementById("msg").setAttribute("style", `color : #FF5733;`)
+            //         }
+            //         else if (abc >= "20%" && abc <= "60%")
+            //         {
+            //             bar.setAttribute("style", `width:${abc}; background : #FFC300;`)
+            //             document.getElementById("msg").innerText = "*Device battery is halfway, recommend to charge";
+            //             document.getElementById("msg").setAttribute("style", `color : #FFC300;`)
+            //         }
+            //         else
+            //         {
+            //             bar.setAttribute("style", `width:${abc}; background : red;`)
+            //             document.getElementById("msg").innerText = "*Battery low !!! Kindly charge your device to avoid unexpected shutdown";
+            //             document.getElementById("msg").setAttribute("style", `color : red;`)
+            //         }
+                    
+
+            //         // if(battery.level >= 0.75 && battery.level < 1)
+            //         //     {
+            //         //         // // var abc = battery.level*100+"%";
+            //         //         // output.innerHTML = "Your current battery level is " + battery.level*100 + "%";
+            //         //         // document.getElementById("msg").innerText = "*Device battery is almost full";
+            //         //         // bar.setAttribute("style", `width:${abc}`)
+            //         //         bar.setAttribute("style", `background : green;`)
+            //         //         // document.getElementById("msg").setAttribute("style", `color : green;`)
+            //         //         // document.getElementById("bar").setAttribute("style", `border : 2px solid green;`)
+            //         //     }
+            //         // else if(battery.level >= 0.5 && battery.level < 0.75)
+            //         //     {
+            //         //         // output.innerHTML = "Your current battery level is " + battery.level*100 + "%";
+            //         //         // document.getElementById("msg").innerText = "*Device battery is at optimal level, please carry on with your work";
+            //         //         // bar.setAttribute("style", `width:${abc}`)
+            //         //         bar.setAttribute("style", `background : orange;`)
+            //         //         // document.getElementById("bar").setAttribute("style", `border : 2px solid orange;`)
+            //         //     }
+            //         // else if(battery.level >= 0.2 && battery.level < 0.5)
+            //         //     {
+            //         //         // var abc = battery.level*100+"%";
+            //         //         // output.innerHTML = "Your current battery level is " + battery.level*100 + "%";
+            //         //         // document.getElementById("msg").innerHTML = "*Device battery is at optimal level, please carry on with your work";
+            //         //         // bar.setAttribute("style", `width:${abc}`)
+            //         //         bar.setAttribute("style", `background : yellow;`)
+            //         //         // document.getElementById("bar").setAttribute("style", `border : 2px solid yellow;`)
+            //         //     }
+            //         // else(battery.level >= 0.01)
+            //         //     {
+            //         //         // output.innerHTML = "Your current battery level is " + battery.level*100 + "%";
+            //         //         // document.getElementById("msg").innerText = "*Battery low !!! Kindly charge your device to avoid unexpected shutdown";
+            //         //         // bar.setAttribute("style", `width:${abc}`)
+            //         //         bar.setAttribute("style", `background : red;`)
+            //         //         // document.getElementById("msg").setAttribute("style", `color : red;`)
+            //         //     // }
+                    
+
+
+
+
+
+            //         // output.innerHTML = "Your curent battery level is " + battery.level*100 + "%";
+            //         // var abc = battery.level*100+"%";
+            //         // console.log(abc)
+            //         // output.innerHTML = "Your current battery level is " + battery.level*100 + "%";
+            //         // bar.setAttribute("style", `width: ${abc}`)
+            //         // if(battery.level < 50) batfil.style.background = #FF5722;
+                    
+            //     });
+
+
+  
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

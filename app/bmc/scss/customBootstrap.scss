@@ -1,0 +1,11 @@
+//import bootstrap & custom changes
+$theme-colors:(
+    "canvasblue": #6EB9D0,
+    "canvasorange": #FB8863,
+    "canvasgreen": #E0EC6F,
+    "canvasyellow": #FBCA5F
+);
+
+
+
+@import "../bootstrap/scss/bootstrap.scss";
